@@ -36,6 +36,7 @@
           - graphviz
           - jq
           - libsqlite3-dev
+          - mlocate
           - neofetch
           - net-tools
           - nmap
