@@ -58,6 +58,9 @@
     - include_tasks: tasks/rbenv.yml
       when: install_rbenv
 
+    - include_tasks: tasks/kubectl.yml
+      when: install_kubectl
+
   post_tasks:
     - name: "apt autoclean && autoremove"
       apt:

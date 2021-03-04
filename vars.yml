@@ -3,3 +3,4 @@ install_aws_vault: yes
 install_rbenv: yes
 install_tfenv: yes
 install_yarn: yes
+install_kubectl: yes
