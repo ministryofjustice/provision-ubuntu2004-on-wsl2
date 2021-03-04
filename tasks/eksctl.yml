@@ -1,0 +1,8 @@
+
+- name: "eksctl download & install v0.4.0"
+  get_url:
+    url: "https://github.com/weaveworks/eksctl/releases/download/0.40.0-rc.0/eksctl_Linux_amd64.tar.gz"
+    dest: "${HOME}/.eksctl"
+    checksum: "sha256:455113ae3af97db089999568855e518932d8b45b1115a60a06cced4ebd989df6"
+    mode: '0755'
+  become: true
