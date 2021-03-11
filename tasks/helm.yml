@@ -18,3 +18,7 @@
   shell: 'mv /tmp/linux-amd64/helm /usr/local/bin'
   become: true
 
+- name: Add official repo to Helm
+  shell: 'helm repo add stable https://charts.helm.sh/stable'
+
+
