@@ -74,6 +74,12 @@
         autoremove: yes
       become: true
 
+    - name: "clean up /tmp"
+      file:
+        path: /tmp/*
+        state: absent
+      become: true
+
   roles:
     - role: stephdewit.nvm
       nvm_version: 0.37.2
