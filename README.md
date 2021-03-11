@@ -36,7 +36,14 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 - [tfenv](tasks/tfenv.yml)
 - [aws vault](tasks/aws-vault.yml)
 - [rbenv](tasks/rbenv.yml)
+- [kubectl](tasks/kubectl.yml)
+- [eksctl](tasks/eksctl.yml)
+- [helm](tasks/helm.yml)
 
+## Updating after adding new tasks or applications
+1. `cd provision-ubuntu2004-on-wsl2`
+1. `pipenv shell`
+1. `make update`
 
 ## Notes
 
