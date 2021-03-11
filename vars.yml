@@ -5,3 +5,4 @@ install_tfenv: yes
 install_yarn: yes
 install_kubectl: yes
 install_eksctl: yes
+install_helm: yes

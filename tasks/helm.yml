@@ -1,0 +1,20 @@
+
+- name: "helm download 3.5.3"
+  get_url:
+    url: "https://get.helm.sh/helm-v3.5.3-linux-amd64.tar.gz"
+    dest: "/tmp"
+    checksum: "sha256:2170a1a644a9e0b863f00c17b761ce33d4323da64fc74562a3a6df2abbf6cd70"
+    mode: '0755'
+  become: true
+
+- name: Extract and install
+ 
+  unarchive:
+    src: "/tmp/helm-v3.5.3-linux-amd64.tar.gz"
+    dest: "/tmp"
+  become: true
+
+- name: Move Helm to /bin
+  shell: 'mv /tmp/linux-amd64/helm /usr/local/bin'
+  become: true
+

@@ -63,6 +63,9 @@
 
     - include_tasks: tasks/eksctl.yml
       when: install_eksctl
+    
+    - include_tasks: tasks/helm.yml
+      when: install_helm
 
   post_tasks:
     - name: "apt autoclean && autoremove"
