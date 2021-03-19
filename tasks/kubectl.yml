@@ -2,7 +2,7 @@
 - name: "kubectl download & install v1.2"
   get_url:
     url: "https://dl.k8s.io/release/v1.20.0/bin/linux/amd64/kubectl"
-    dest: "${HOME}/.kubectl"
+    dest: "/usr/local/bin"
     checksum: "sha256:a5895007f331f08d2e082eb12458764949559f30bcc5beae26c38f3e2724262c"
     mode: '0755'
   become: true
