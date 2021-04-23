@@ -40,6 +40,7 @@
           - neofetch
           - net-tools
           - nmap
+	  - pry
           - ruby-rspec-core
           - silversearcher-ag
           - tree
