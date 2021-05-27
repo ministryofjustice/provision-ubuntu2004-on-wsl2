@@ -40,8 +40,8 @@
           - neofetch
           - net-tools
           - nmap
-	        - pry
           - ruby-rspec-core
+          - pry
           - silversearcher-ag
           - tree
           - unzip
