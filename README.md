@@ -14,14 +14,16 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 1. WSL 2
 1. Ubuntu 20.04 installed via Windows Store.
 
+### Fix known DNS issues with WSL2
+1. `./scripts/fix_dns.sh 192.168.x.x` (your home router IP)
+
 ### Configure Python & pipenv
 
-1. `sudo apt install --yes python3-pip`
-1. `sudo pip3 install pipenv`
+1. `make prep`
 
 ### Clone and Run
 
-1. `git clone git@github.com:neilkidd/provision-ubuntu2004-on-wsl2.git`
+1. `git clone git@github.com:wanieldilson/provision-ubuntu2004-on-wsl2.git`
 1. `cd provision-ubuntu2004-on-wsl2`
 1. `pipenv install --dev`
 1. `pipenv shell`
@@ -42,7 +44,7 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 
 ## Updating after adding new tasks or applications
 1. `cd provision-ubuntu2004-on-wsl2`
-1. `pipenv shell`
+1. `make shell`
 1. `make update`
 
 ## Notes
