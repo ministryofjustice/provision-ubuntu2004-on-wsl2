@@ -29,6 +29,7 @@
       apt:
         state: latest
         name:
+          - apache2-utils
           - awscli
           - dos2unix
           - gnupg
