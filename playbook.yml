@@ -35,6 +35,7 @@
           - gnupg
           - golang
           - graphviz
+          - inetutils-traceroute
           - jq
           - libsqlite3-dev
           - mlocate
