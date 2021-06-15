@@ -39,6 +39,7 @@
           - jq
           - libsqlite3-dev
           - mlocate
+          - mysql-client-core-8.0
           - neofetch
           - net-tools
           - nmap
