@@ -27,7 +27,7 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 
 1. `make prep`
 
-### Clone and Run
+### Clone and Run (the first time)
 
 1. `git clone git@github.com:wanieldilson/provision-ubuntu2004-on-wsl2.git`
 1. `cd provision-ubuntu2004-on-wsl2`
@@ -36,6 +36,11 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 1. `ansible-galaxy install -r requirements.yml`
 1. `ansible-playbook playbook.yml -i inventory --ask-become-pass`
 1. Profit :smile:
+
+## Updating after adding new tasks or applications
+1. `cd provision-ubuntu2004-on-wsl2`
+1. `make shell`
+1. `make update`
 
 ## What is Installed?
 
@@ -48,10 +53,6 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 - [eksctl](tasks/eksctl.yml)
 - [helm](tasks/helm.yml)
 
-## Updating after adding new tasks or applications
-1. `cd provision-ubuntu2004-on-wsl2`
-1. `make shell`
-1. `make update`
 
 ## Notes
 
