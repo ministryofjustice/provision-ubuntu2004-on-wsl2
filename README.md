@@ -11,8 +11,14 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 ### Prerequisites
 
 1. Windows 10.
-1. WSL 2
+1. WSL 2 
+`dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+`dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+`Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart`
+`wsl --set-default-version 2`
+
 1. Ubuntu 20.04 installed via Windows Store.
+1. [Generate an SSH key in your Ubuntu instance and add to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
 
 ### Fix known DNS issues with WSL2
 1. `./scripts/fix_dns.sh 192.168.x.x` (your home router IP)
