@@ -23,19 +23,18 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 ### Fix known DNS issues with WSL2
 1. `./scripts/fix_dns.sh 192.168.x.x` (your home router IP)
 
-### Configure Python & pipenv
+### Configure Python & pipenv (only need to do this once)
 
 1. `make prep`
+1. `make env`
 
 ### Clone and Run (the first time)
 
 1. `git clone git@github.com:wanieldilson/provision-ubuntu2004-on-wsl2.git`
 1. `cd provision-ubuntu2004-on-wsl2`
-1. `pipenv install --dev`
-1. `pipenv shell`
+1. `make shell`
 1. `ansible-galaxy install -r requirements.yml`
 1. `ansible-playbook playbook.yml -i inventory --ask-become-pass`
-1. Profit :smile:
 
 ## Updating after adding new tasks or applications
 1. `cd provision-ubuntu2004-on-wsl2`
