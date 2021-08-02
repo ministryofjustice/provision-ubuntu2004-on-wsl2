@@ -19,6 +19,7 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 
 1. Ubuntu 20.04 installed via Windows Store.
 1. [Generate an SSH key in your Ubuntu instance and add to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
+1. Clone this repo! 
 
 ### Fix known DNS issues with WSL2
 1. `./scripts/fix_dns.sh 192.168.x.x` (your home router IP)
