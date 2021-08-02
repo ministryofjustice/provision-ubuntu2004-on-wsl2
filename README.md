@@ -32,8 +32,6 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 
 ### Clone and Run (the first time)
 
-1. `git clone git@github.com:wanieldilson/provision-ubuntu2004-on-wsl2.git`
-1. `cd provision-ubuntu2004-on-wsl2`
 1. `make shell`
 1. `ansible-galaxy install -r requirements.yml`
 1. `ansible-playbook playbook.yml -i inventory --ask-become-pass`
