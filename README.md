@@ -10,12 +10,12 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 
 ### Prerequisites
 
-1. Windows 10.
-1. WSL 2 
-1. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
-1. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
-1. `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart`
-1. `wsl --set-default-version 2`
+1. Windows 10
+1. WSL 2 (to enable, run the below commands in an elevated powershell prompt)
+3. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+4. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+5. `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart`
+6. `wsl --set-default-version 2`
 
 1. Ubuntu 20.04 installed via Windows Store.
 1. [Generate an SSH key in your Ubuntu instance and add to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
