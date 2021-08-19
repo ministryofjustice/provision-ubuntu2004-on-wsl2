@@ -27,6 +27,7 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 ### Configure Python & pipenv (only need to do this once)
 
 1. Install Make `sudo apt install make`
+1. `sudo apt-get update`
 1. `make prep`
 1. `make env`
 
