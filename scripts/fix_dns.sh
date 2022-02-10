@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo cp wsl2/wsl.conf /etc/wsl.config
+sudo cp wsl2/wsl.conf /etc/wsl.conf
 sudo rm -f /etc/resolv.conf
 echo "nameserver $1" >> wsl2/resolv.conf
 sudo cp wsl2/resolv.conf /etc/resolv.conf
