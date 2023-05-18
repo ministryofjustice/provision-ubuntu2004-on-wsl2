@@ -69,3 +69,4 @@ See [vars.yml](vars.yml) to configure which tasks get run.
 - [Jeff Geerling's Ansible for Devops](https://leanpub.com/ansible-for-devops/c/J2V7E1SOETu3)
 - See [Brad's Pipenv Crash Course](https://youtu.be/6Qmnh5C4Pmo)
 - Brad's [Pipenv cheatsheet](https://gist.github.com/bradtraversy/c70a93d6536ed63786c434707b898d55)
+- [Kubernetes Releases](https://kubernetes.io/releases/)

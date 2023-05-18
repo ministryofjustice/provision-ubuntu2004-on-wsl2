@@ -9,17 +9,17 @@ install_helm: yes
 install_tig: yes
 
 aws_vault:
-  version: "v6.2.0"
-  checksum: "sha256:1d87a634cd22de9c9cf0cbbbd710651622414ecc556e9c91c9acdc5f07329c6e"
+  version: "v7.2.0"
+  checksum: "sha256:b92bcfc4a78aa8c547ae5920d196943268529c5dbc9c5aca80b797a18a5d0693"
 kubectl:
-  version: "v1.20.0"
-  checksum: "sha256:a5895007f331f08d2e082eb12458764949559f30bcc5beae26c38f3e2724262c"
+  version: "v1.26.4"
+  checksum: "sha256:636ac0eaa467dbceda4b2c4e33662adc9709f5ce40341c9fc1a687fc276ac02d"
 eksctl:
-  version: "0.40.0-rc.0"
-  checksum: "sha256:455113ae3af97db089999568855e518932d8b45b1115a60a06cced4ebd989df6"
+  version: "v0.141.0"
+  checksum: "sha256:a6f7390e3520721376cfc35bfc688492ab380e6adcc5cbd897d996db44f00712"
 helm:
-  version: "v3.5.3"
-  checksum: "sha256:2170a1a644a9e0b863f00c17b761ce33d4323da64fc74562a3a6df2abbf6cd70"
+  version: "v3.12.0"
+  checksum: "sha256:da36e117d6dbc57c8ec5bab2283222fbd108db86c83389eebe045ad1ef3e2c3b"
 tig:
   version: "2.5.8"
   checksum: "sha256:b70e0a42aed74a4a3990ccfe35262305917175e3164330c0889bd70580406391"
