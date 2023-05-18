@@ -1,0 +1,24 @@
+---
+
+- name: "tig download & install {{ tig['version'] }}"
+  get_url:
+    url: "https://github.com/jonas/tig/releases/download/tig-{{ tig['version'] }}/tig-{{ tig['version'] }}.tar.gz"
+    dest: "/tmp"
+    checksum: "{{ tig['checksum'] }}"
+    mode: '0755'
+  become: true
+
+- name: "Extract and install" 
+  unarchive:
+    src: "/tmp/tig-{{ tig['version'] }}.tar.gz"
+    dest: "/tmp"
+  become: true
+
+- name: "Install tig with make"
+  make:
+    chdir: "/tmp/tig-{{ tig['version'] }}"
+    target: "install"
+    params:
+      prefix: "/usr/local"
+  become: true
+

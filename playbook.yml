@@ -38,6 +38,8 @@
           - inetutils-traceroute
           - jq
           - libsqlite3-dev
+          - libncurses5-dev
+          - libncursesw5-dev
           - mlocate
           - mysql-client-core-8.0
           - neofetch
@@ -71,6 +73,9 @@
     
     - include_tasks: tasks/helm.yml
       when: install_helm
+    
+    - include_tasks: tasks/tig.yml
+      when: install_tig
 
   post_tasks:
     - name: "apt autoclean && autoremove"
