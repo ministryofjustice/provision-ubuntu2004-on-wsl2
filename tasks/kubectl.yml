@@ -1,8 +1,20 @@
 
-- name: "kubectl download & install v1.2"
+- name: "kubectl download & install {{ kubectl['version'] }}"
   get_url:
-    url: "https://dl.k8s.io/release/v1.20.0/bin/linux/amd64/kubectl"
+    url: "https://dl.k8s.io/release/{{ kubectl['version'] }}/bin/linux/amd64/kubectl"
     dest: "/usr/local/bin"
-    checksum: "sha256:a5895007f331f08d2e082eb12458764949559f30bcc5beae26c38f3e2724262c"
+    checksum:  "{{ kubectl['checksum'] }}"
     mode: '0755'
   become: true
+
+- name: "Create .kube directory"
+  ansible.builtin.file:
+    path: ~/.kube
+    state: directory
+    mode: '0755' 
+
+- name: "Create kube config file"
+  ansible.builtin.file:
+    path: ~/.kube/config
+    state: touch
+    mode: '0700'

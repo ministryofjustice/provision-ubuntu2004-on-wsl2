@@ -6,3 +6,20 @@ install_yarn: yes
 install_kubectl: yes
 install_eksctl: yes
 install_helm: yes
+install_tig: yes
+
+aws_vault:
+  version: "v7.2.0"
+  checksum: "sha256:b92bcfc4a78aa8c547ae5920d196943268529c5dbc9c5aca80b797a18a5d0693"
+kubectl:
+  version: "v1.26.4"
+  checksum: "sha256:636ac0eaa467dbceda4b2c4e33662adc9709f5ce40341c9fc1a687fc276ac02d"
+eksctl:
+  version: "v0.141.0"
+  checksum: "sha256:a6f7390e3520721376cfc35bfc688492ab380e6adcc5cbd897d996db44f00712"
+helm:
+  version: "v3.12.0"
+  checksum: "sha256:da36e117d6dbc57c8ec5bab2283222fbd108db86c83389eebe045ad1ef3e2c3b"
+tig:
+  version: "2.5.8"
+  checksum: "sha256:b70e0a42aed74a4a3990ccfe35262305917175e3164330c0889bd70580406391"

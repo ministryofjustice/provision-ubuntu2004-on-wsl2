@@ -1,16 +1,14 @@
 
-- name: "eksctl download v0.4.0"
+- name: "eksctl download & install {{ eksctl['version'] }}"
   get_url:
-    url: "https://github.com/weaveworks/eksctl/releases/download/0.40.0-rc.0/eksctl_Linux_amd64.tar.gz"
+    url: "https://github.com/weaveworks/eksctl/releases/download/{{ eksctl['version'] }}/eksctl_Linux_amd64.tar.gz"
     dest: "/tmp"
-    checksum: "sha256:455113ae3af97db089999568855e518932d8b45b1115a60a06cced4ebd989df6"
+    checksum: "{{ eksctl['checksum'] }}"
     mode: '0755'
   become: true
 
-- name: Extract and install
- 
+- name: "Extract and install eksctl package" 
   unarchive:
     src: "/tmp/eksctl_Linux_amd64.tar.gz"
     dest: "/usr/local/bin"
   become: true
-
