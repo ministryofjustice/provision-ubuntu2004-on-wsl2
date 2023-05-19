@@ -46,6 +46,7 @@
           - net-tools
           - nmap
           - ruby-rspec-core
+          - pass
           - pry
           - silversearcher-ag
           - tree
@@ -70,10 +71,10 @@
 
     - include_tasks: tasks/eksctl.yml
       when: install_eksctl
-    
+
     - include_tasks: tasks/helm.yml
       when: install_helm
-    
+
     - include_tasks: tasks/tig.yml
       when: install_tig
 
