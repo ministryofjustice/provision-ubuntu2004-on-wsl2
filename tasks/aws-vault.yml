@@ -40,3 +40,16 @@
     path: '${HOME}/.bashrc'
     state: present
     line: 'export AWS_SESSION_TOKEN_TTL=10h'
+
+- name: "Create .aws directory in home directory"
+  ansible.builtin.file:
+    path: "/{{ ansible_env.HOME }}/.aws"
+    state: directory
+    mode: '0755'
+
+- name: "Place aws .config file"
+  template:
+    src: ../templates/aws-cli-config.j2
+    dest: "/{{ ansible_env.HOME }}/.aws/config"
+    backup: true
+    mode: 0640
