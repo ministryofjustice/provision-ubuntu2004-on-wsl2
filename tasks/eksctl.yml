@@ -7,10 +7,8 @@
     mode: '0755'
   become: true
 
-- name: Extract and install
- 
+- name: "Extract and install eksctl package" 
   unarchive:
     src: "/tmp/eksctl_Linux_amd64.tar.gz"
     dest: "/usr/local/bin"
   become: true
-

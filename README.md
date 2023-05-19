@@ -22,7 +22,7 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 1. Clone this repo! 
 
 ### Fix known DNS issues with WSL2
-1. `./scripts/fix_dns.sh 192.168.x.x` (your home router IP)
+1. `./scripts/fix_dns.sh -n "192.168.x.x" -h "a-host-name"` (your home router IP)
 
 ### Configure Python & pipenv (only need to do this once)
 
@@ -70,3 +70,7 @@ See [vars.yml](vars.yml) to configure which tasks get run.
 - See [Brad's Pipenv Crash Course](https://youtu.be/6Qmnh5C4Pmo)
 - Brad's [Pipenv cheatsheet](https://gist.github.com/bradtraversy/c70a93d6536ed63786c434707b898d55)
 - [Kubernetes Releases](https://kubernetes.io/releases/)
+- [eksctl releases](https://github.com/weaveworks/eksctl/releases)
+- [Tig: text-mode interface for Git](https://jonas.github.io/tig/)
+- [AWS-VAULT](https://github.com/99designs/aws-vault/releases)
+- [wsl-open](https://github.com/4U6U57/wsl-open)

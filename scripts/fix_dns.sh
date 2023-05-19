@@ -1,13 +1,29 @@
 #!/bin/bash
 
-nameserver="${1}"
-hostname="${2}"
+
+defaultnameserver_ip="192.168.1.1"
+default_hostname=$(grep -E '^PRETTY_NAME=' /etc/os-release | cut -d'=' -f2 | sed "s/ /-/g;s/\./-/g;s/\"//g")
+
+while getopts n:h: flag
+do
+    case "${flag}" in
+        n) nameserver="${OPTARG}";;
+        h) hostname="${OPTARG}";;
+    esac
+done
+
+[[ -z ${nameserver} ]] && nameserver="${defaultnameserver_ip}"
+[[ -z ${hostname} ]] && hostname="${default_hostname}"
+
+
 current_hostname="$(hostname)"
 current_time=$(date "+%Y_%m_%d-%H_%M_%S")
 setup_backup_dir="${HOME}/setup-backup/${current_time}"
 
 printf "Nameserver ip - %s\n" "${nameserver}"
 printf "Current Hostname - %s\nNew Hostname - %s\n\n" "${current_hostname}" "${hostname}"
+
+read -n 1 -r -s -p $'Press enter to continue...\n'
 
 mkdir -p "${setup_backup_dir}"
 
