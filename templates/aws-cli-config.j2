@@ -42,19 +42,19 @@ output = json
 [profile mojo-shared-services-cli]
 region = eu-west-2
 output = json
-credential_process = /usr/local/bin/aws-vault exec mojo-shared-services --json --backend=pass --prompt=pass
+credential_process = /usr/local/bin/aws-vault exec mojo-shared-services --json
 
 [profile mojo-development-cli]
 region = eu-west-2
 output = json
-credential_process = /usr/local/bin/aws-vault exec mojo-development --json --backend=pass --prompt=pass
+credential_process = /usr/local/bin/aws-vault exec mojo-development --json
 
 [profile mojo-pre-production-cli]
 region = eu-west-2
 output = json
-credential_process = /usr/local/bin/aws-vault exec mojo-pre-production --json --backend=pass --prompt=pass
+credential_process = /usr/local/bin/aws-vault exec mojo-pre-production --json
 
 [profile mojo-production-cli]
 region = eu-west-2
 output = json
-credential_process = /usr/local/bin/aws-vault exec mojo-production --json --backend=pass --prompt=pass
+credential_process = /usr/local/bin/aws-vault exec mojo-production --json
