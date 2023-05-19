@@ -16,10 +16,15 @@ Intended to be re-runnable (idempotent) to maintain and update when required.
 4. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
 5. `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart`
 6. `wsl --set-default-version 2`
+7. `wsl --shutdown`
 
-1. Ubuntu 20.04 installed via Windows Store.
-1. [Generate an SSH key in your Ubuntu instance and add to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
-1. Clone this repo! 
+1. List available wsl distros `wsl --list --online`
+1. Ubuntu 20.04 installed via cmd `wsl --install -d Ubuntu-20.04`
+1. [Generate an SSH key in your Ubuntu instance and add to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   
+1. In PowerShell type `ipconfig` and note/copy the "Default Gateway" ip for "Wireless LAN adapter WiFi:"
+1. Temp fix DNS `echo "<default gateway ip>" > /etc/resolv.conf`
+1. Now you can clone this repo!
 
 ### Fix known DNS issues with WSL2
 1. `./scripts/fix_dns.sh -n "192.168.x.x" -h "a-host-name"` (your home router IP)
