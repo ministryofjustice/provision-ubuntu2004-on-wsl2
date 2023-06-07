@@ -7,6 +7,7 @@ install_kubectl: yes
 install_eksctl: yes
 install_helm: yes
 install_tig: yes
+init_repos: yes
 
 aws_vault:
   version: "v7.2.0"
