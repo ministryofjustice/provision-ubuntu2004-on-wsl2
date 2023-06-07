@@ -1,0 +1,9 @@
+
+- name: Execute getrepos.sh script
+  shell: "{{ playbook_dir  }}/scripts/getrepos.sh"
+  become: false
+  register: script_output
+
+- name: Show script output
+  debug:
+    var: script_output.stdout_lines

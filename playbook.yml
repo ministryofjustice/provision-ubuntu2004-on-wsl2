@@ -78,6 +78,9 @@
     - include_tasks: tasks/tig.yml
       when: install_tig
 
+    - include_tasks: tasks/initrepos.yml
+      when: init_repos
+
   post_tasks:
     - name: "apt autoclean && autoremove"
       apt:
