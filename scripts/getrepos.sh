@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-export REPOPATH="${HOME}/gitrepos/moj/"
+export REPOPATH="${HOME}/gitrepos/moj"
 
 mkdir -p "${REPOPATH}" || exit 1
 
-cd "${REPOPATH}/all_repos" || exit 1
+cd "${REPOPATH}" || exit 1
+mkdir -p all_repos
+cd all_repos || exit 1
 
 repositories=(
   "nvvs-devops git@github.com:ministryofjustice/nvvs-devops"
