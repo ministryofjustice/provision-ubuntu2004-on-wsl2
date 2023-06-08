@@ -24,3 +24,7 @@ helm:
 tig:
   version: "2.5.8"
   checksum: "sha256:b70e0a42aed74a4a3990ccfe35262305917175e3164330c0889bd70580406391"
+terraform:
+  versions:
+    - 1.1.9
+  default: 1.1.9

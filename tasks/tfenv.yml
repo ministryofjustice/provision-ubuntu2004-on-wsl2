@@ -8,3 +8,13 @@
     path: '${HOME}/.bashrc'
     state: present
     line: 'export PATH="$HOME/.tfenv/bin:$PATH"'
+
+- name: Install Terraform versions
+  shell: "tfenv install {{ item }}"
+  become: false
+  with_items:
+    - "{{ terraform.versions }}"
+
+- name: Set default Terraform version
+  shell: "tfenv use {{ terraform.default }}"
+  become: false
