@@ -79,3 +79,5 @@ See [vars.yml](vars.yml) to configure which tasks get run.
 - [Tig: text-mode interface for Git](https://jonas.github.io/tig/)
 - [AWS-VAULT](https://github.com/99designs/aws-vault/releases)
 - [wsl-open](https://github.com/4U6U57/wsl-open)
+
+Some files are useful when setting up a Mac
