@@ -1,3 +1,9 @@
+# Notice of deprecation 
+
+The Lan&WIFI (DevOps) Team, no longer use Windows PC's therefore this repo is no longer maintained.
+
+We have moved to our Mac developer provisioner script: [linuxify](https://github.com/ministryofjustice/linuxify)
+
 # Provision Ubuntu 2004 on WSL2
 
 Automating provisioning Ubuntu 20.04 with Ansible on WSL 2
